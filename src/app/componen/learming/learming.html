@@ -5,41 +5,18 @@
         </div>
         <div class="card-body">
             <div>
-                <ul class="list-group">
-                    <li class="list-group-item">No. {{course.id}}</li>
-                </ul>
+                <course-view [course]="course"></course-view>
             </div>
             <div class="row my-3">
                 <div class="col">
                     <h3>MATERIA</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">NAME: {{course.name}}</li>
-                    </ul>
+                    <materia-view [course]="course"></materia-view>
                 </div>
             </div>
             <div class="card my-3">
                 <h3 class="card-header">STUDENT</h3>
                 <div class="card-body p-0">
-                    <table class="table table-striped mb-0">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Identification</th>
-                                <th>Name</th>
-                                <th>Surname</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @for (item of course.student; track $index) {
-                                <tr>
-                                    <td>{{item.id}}</td>
-                                    <td>{{item.identification}}</td>
-                                    <td>{{item.name}}</td>
-                                    <td>{{item.sumame}}</td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+                    <item-view [course]="course"></item-view>
                 </div>
             </div>
         </div>

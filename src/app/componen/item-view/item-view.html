@@ -1,0 +1,20 @@
+<table class="table table-striped mb-0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Identification</th>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of course.student; track $index) {
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.identification}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.sumame}}</td>
+        </tr>
+        }
+    </tbody>
+</table>
